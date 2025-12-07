@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - FastRide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("wp9199752.jpg");
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    
+    }
+
+    .login-container {
+      background-color: transparent;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(2, 2, 2, 0.30);
+      width: 300px;
+      padding-bottom: 25px;
+      color:#219150;
+      border: 1px solid ;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color:black;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #219150;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .home-link{
+      text-decoration: none;
+      padding-top: 3%;
+    }
+    .home-link a{
+      text-decoration: none;
+      color:brown
+      
+      
+    }
+    .noaccount a{
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+    .noaccount{
+      color: #ccc;
+    }
+    .remember a{
+      text-decoration: none;
+      padding-bottom: 20px;
+      color: aliceblue;
+      
+    }
+    .remember{
+      padding-bottom: 10px;
+      
+      
+    }
+    
+    
+
+    .back-link a {
+      text-decoration: none;
+      color: #2980b9;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to FastRide</h2>
+    <form onsubmit="login(event)">
+      <label for="email">Email:</label>
+      <input style="background-color: transparent;" type="email" id="email" required>
+
+      <label for="password">Password:</label>
+      <input style="background-color: transparent;" type="password" id="password" required>
+
+      <div class="remember">
+        <label><input type="checkbox">Remember me</label><br>
+        <a href="#">Forgot Password</a>
+      </div>
+      <div class="back-to-home">
+    <a href="home.html" style="text-decoration: none;color: #219150; font-weight: bold;">back to home</a>
+  </div><br>
+      
+
+      <input type="submit" value="Login">
+    </form>
+      
+    
+    
+    <div class="noaccount">
+        <p>Have no account?<a href="#">Register</a>
+      </div>
+
+    
+  </div>
+  
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>
+

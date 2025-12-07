@@ -1,0 +1,143 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FastRide Car Rentals</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      background-image: url("wp3237184.jpg");
+      background-position: center;
+      background-size: cover;
+      margin: 0%;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      border-width: 100%;
+      
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      
+    
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color:#27ae60;
+    }
+
+    p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+      
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    
+    }
+    
+
+    .feature-box {
+      background:#2c3e50;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 style="font-size: 2.5rem;">
+      <span style="color:#27ae60;">FastRide</span> Premium Car Rentals
+    </h1>
+    <p style="color: white;" premium rental cars in a click.</p>
+    <br>
+    <nav>
+      
+      <a href="index.html">Cars</a>
+      <a href="logintry2.html">Login</a>
+      <a href="#" id="contact-link">Contact</a>
+      <p id="phone-number" style="display:none;color: antiquewhite;">Call us at: 9990000119</p>
+    </nav>
+    <script>
+      document.getElementById('contact-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('phone-number').style.display = 'block';
+      });
+    </script>
+  </header>
+
+  <section id="about" style="border:2px solid black;border-radius: 20px;margin-bottom:20px;margin-top: 20px;margin: 20px;">
+    <h2>About Us</h2>
+    <p style="color:white;background-color: #2c3e50;border-radius: 20px;padding: 20px;">
+      At <strong>FastRide</strong>, we provide a premium car rental experience with a handpicked fleet of luxurious and high-performance vehicles.
+      Whether you're traveling for business or leisure, we ensure you drive in style and comfort at affordable rates.
+    </p>
+  </section>
+
+  <section id="features" style="background-color:transparent;border-radius: 20px; color: #2c3e50; border: 2px solid black;margin: 20px;">
+    <h2 style="color:#27ae60">Our Features</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Luxury Fleet</h3>
+        <p>Choose from premium models including Land Cruiser, Rolls Royce, and more.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Quick Booking</h3>
+        <p>Book your car in seconds with our simple and responsive booking form.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Affordable Prices</h3>
+        <p>Drive luxury without breaking the bank. Starting from ₹3,500/day.</p>
+      </div>
+      <div class="feature-box">
+        <h3>24/7 Support</h3>
+        <p>We’re available around the clock to assist you during your trip.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 FastRide Car Rentals. All rights reserved.
+  </footer>
+
+</body>
+</html>

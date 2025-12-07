@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FastRide Car Rentals</title>
+  <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+   
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+
+    .car-listing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+
+    .car {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .car:hover {
+      transform: translateY(-5px);
+    }
+
+    .car img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .car h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .car p {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .car button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .booking-form {
+      display: none;
+      margin-top: 1rem;
+      text-align: left;
+    }
+
+    .booking-form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .booking-form input[type="submit"] {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .car-listing {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 style="font-family: Arial, sans-serif; font-size: 2.5rem;">
+  <span style="color:#27ae60;">FastRide</span> Premium Car Rentals
+</h1>
+
+    <h14>Get premium rental cars in a click.</h14><br><br><br>
+
+    <nav>
+      <a href="home.html">Home</a>
+      
+      <a href="logintry2.html">Login</a>
+
+      <a href="#" id="contact-link">Contact</a>
+<p id="phone-number" style="display:none;">Call us at: 9990000119</p>
+
+<script>
+  document.getElementById('contact-link').addEventListener('click', function(event) {
+    event.preventDefault(); // prevent the default jump
+    document.getElementById('phone-number').style.display = 'block';
+  });
+</script>
+
+    </nav>
+  </header>
+
+  <section class="car-listing">
+
+    <div class="car">
+      <img src="file:///C:\Users\Asus\OneDrive\Desktop\VScode/7(series).jpeg" alt="BMW 7 SERIES">
+      <h3>BMW 7 SERIES</h3>
+      <p>Starting at 15000Rs/day</p>
+      <button onclick="toggleForm(this)">Book Now</button>
+
+      <div class="booking-form">
+        <form>
+          <label>Your Name:</label>
+          <input type="text" required>
+
+          <label>Pick-up Date:</label>
+          <input type="date" required>
+
+          <label>Number of Days:</label>
+          <input type="number" min="1" max="30" required>
+
+          <input type="submit" value="Confirm Booking">
+        </form>
+      </div>
+    </div>
+
+    <div class="car">
+      <img src="file:///C:\Users\Asus\OneDrive\Desktop\VScode/OIP (2).jpeg" alt="BENZ S CLASS">
+      <h3>BENZ S CLASS</h3>
+      <p>Starting at 16000Rs/day</p>
+      <button onclick="toggleForm(this)">Book Now</button>
+
+      <div class="booking-form">
+        <form>
+          <label>Your Name:</label>
+          <input type="text" required>
+
+          <label>Pick-up Date:</label>
+          <input type="date" required>
+
+          <label>Number of Days:</label>
+          <input type="number" min="1" max="30" required>
+
+          <input type="submit" value="Confirm Booking">
+        </form>
+      </div>
+    </div>
+
+    <div class="car">
+      <img src="file:///C:\Users\Asus\OneDrive\Desktop\VScode/OIP (4).jpg" alt="Mini Cooper">
+      <h3>MINI COOPER</h3>
+      <p>Starting at 8000Rs/day</p>
+      <button onclick="toggleForm(this)">Book Now</button>
+
+      <div class="booking-form">
+        <form>
+          <label>Your Name:</label>
+          <input type="text" required>
+
+          <label>Pick-up Date:</label>
+          <input type="date" required>
+
+          <label>Number of Days:</label>
+          <input type="number" min="1" max="30" required>
+
+          <input type="submit" value="Confirm Booking">
+        </form>
+      </div>
+    </div>
+    <div class="car">
+      <img src="file:///C:\Users\Asus\OneDrive\Desktop\VScode/OIP (3).jpg" alt="Rolls Royce">
+      <h3>ROLLS ROYCE</h3>
+      <p>Starting at 30000/day</p>
+      <button onclick="toggleForm(this)">Book Now</button>
+
+      <div class="booking-form">
+        <form>
+          <label>Your Name:</label>
+          <input type="text" required>
+
+          <label>Pick-up Date:</label>
+          <input type="date" required>
+
+          <label>Number of Days:</label>
+          <input type="number" min="1" max="30" required>
+
+          <input type="submit" value="Confirm Booking">
+        </form>
+      </div>
+    </div>
+    <div class="car">
+      <img src="file:///C:\Users\Asus\OneDrive\Desktop\VScode/OIP (1).jpg" alt="Defender">
+      <h3>DEFENDER</h3>
+      <p>Starting at 10000Rs/day</p>
+      <button onclick="toggleForm(this)">Book Now</button>
+
+      <div class="booking-form">
+        <form>
+          <label>Your Name:</label>
+          <input type="text" required>
+
+          <label>Pick-up Date:</label>
+          <input type="date" required>
+
+          <label>Number of Days:</label>
+          <input type="number" min="1" max="30" required>
+
+          <input type="submit" value="Confirm Booking">
+        </form>
+      </div>
+    </div>
+    <div class="car">
+      <img src="file:///C:\Users\Asus\OneDrive\Desktop\VScode/OIP (2).jpg" alt="Land Cruiser">
+      <h3>LAND CRUISER</h3>
+      <p>Starting at 11000Rs/day</p>
+      <button onclick="toggleForm(this)">Book Now</button>
+
+      <div class="booking-form">
+        <form>
+          <label>Your Name:</label>
+          <input type="text" required>
+
+          <label>Pick-up Date:</label>
+          <input type="date" required>
+
+          <label>Number of Days:</label>
+          <input type="number" min="1" max="30" required>
+
+          <input type="submit" value="Confirm Booking">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 FastRide Car Rentals. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleForm(button) {
+      const form = button.nextElementSibling;
+      const isVisible = form.style.display === "block";
+      form.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "Book Now" : "Hide Booking Form";
+    }
+  </script>
+
+</body>
+
+
